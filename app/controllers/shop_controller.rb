@@ -7,7 +7,7 @@ class ShopController < ApplicationController
     ikwa_order = Order.create :user => current_user,
                               :product => @product,
                               :admin_id => Order::UPDATE_USER["SYSTEM"],
-                              :status => PagSeguro::Notification::STATUS.index(:pending),
+                              :status => 'Compra Iniciada',
                               :price => @product.price
     @order = PagSeguro::Order.new(ikwa_order.id)
     @order.add :id => @product.id, :price => @product.price, :description => @product.description, :email => current_user.email
