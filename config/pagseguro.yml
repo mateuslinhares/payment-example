@@ -9,5 +9,5 @@ test:
 
 production:
   authenticity_token: C8ABC3DAE4324C4499115846814505C3
-  email: rtimbo@ikwa.com.br
+  email: mlinhares@ikwa.com.br
   return_to: "/shop/confirm"
