@@ -8,8 +8,10 @@
     <th>Preço</th>
     <th>Tipo de Pagamento</th>
     <th>Situação</th>
-    <th>Sistema</th>
+    <th>Modificado por</th>
+    <th>Criado em</th>
     <th>Última alteração</th>
+    <th>Último processamento</th>
     <th>Data do Pagamento</th>
   </tr>
 
@@ -22,7 +24,9 @@
     <td><%=h order.payment_type %></td>
     <td><%=h order.status %></td>
     <td><%=h order.admin_name %></td>
+    <td><%=h order.created_at %></td>
     <td><%=h order.updated_at %></td>
+    <td><%=h order.processed_at %></td>
     <td><%=h order.paid_at %></td>
     <td><%= paid_order(order) %></td>
   </tr>
