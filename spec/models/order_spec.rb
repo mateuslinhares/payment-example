@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe Order do
   should_belong_to :product, :user
+  should_have_many :payment_histories
   before(:each) do
     @valid_attributes = {
       :product_id => 1,

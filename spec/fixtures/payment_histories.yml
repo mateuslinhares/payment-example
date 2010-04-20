@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  order: 
+  product: 
+  user: 
+  status: MyString
+  payment_type: MyString
+  price: 9.99
+  processed_at: 2010-04-20 18:02:16
+  paid_at: 2010-04-20 18:02:16
+
+two:
+  order: 
+  product: 
+  user: 
+  status: MyString
+  payment_type: MyString
+  price: 9.99
+  processed_at: 2010-04-20 18:02:16
+  paid_at: 2010-04-20 18:02:16

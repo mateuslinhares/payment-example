@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe Product do
+  should_have_many :orders
+  should_have_many :payment_histories
   should_validate_presence_of :name, :description, :price
 
   before(:each) do
