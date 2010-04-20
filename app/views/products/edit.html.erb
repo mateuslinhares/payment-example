@@ -8,8 +8,16 @@
     <%= f.text_field :name %>
   </p>
   <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </p>
+  <p>
     <%= f.label :price %><br />
     <%= f.text_field :price %>
+  </p>
+  <p>
+    <%= f.label :active %><br />
+    <%= f.check_box :active %>
   </p>
   <p>
     <%= f.submit 'Update' %>
