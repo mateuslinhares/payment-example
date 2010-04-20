@@ -17,4 +17,14 @@ class OrdersController < ApplicationController
       render :index
     end
   end
+
+  def destroy
+    @order = Order.find(params[:id])
+    @order.destroy
+
+    respond_to do |format|
+      format.html { redirect_to(orders_url) }
+      format.xml  { head :ok }
+    end
+  end
 end
