@@ -4,7 +4,7 @@ class CreateProducts < ActiveRecord::Migration
       t.string :name
       t.text :description
       t.decimal :price, :precision => 8, :scale => 2
-      t.boolean :active, :default => :true
+      t.boolean :active, :default => true
 
       t.timestamps
     end
