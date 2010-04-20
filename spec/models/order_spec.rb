@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe Order do
+  should_belong_to :product, :user
   before(:each) do
     @valid_attributes = {
       :product_id => 1,

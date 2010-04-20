@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe User do
+  should_have_many :orders
   before(:each) do
     @valid_attributes = {
       :name => "value for name",
