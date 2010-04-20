@@ -1,0 +1,6 @@
+--colour
+--format specdoc
+--format html:doc/specs.html
+--loadby mtime
+--reverse
+--format profile:spec/profile.txt

@@ -1,0 +1,13 @@
+development: &development
+  developer: true
+  base: "http://localhost:3000"
+  return_to: "/shop/confirm"
+  email: user@example.com
+
+test:
+  <<: *development
+
+production:
+  authenticity_token: C8ABC3DAE4324C4499115846814505C3
+  email: rtimbo@ikwa.com.br
+  return_to: "/shop/confirm"

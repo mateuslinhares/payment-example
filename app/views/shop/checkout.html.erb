@@ -1,0 +1,6 @@
+<h2>Produto</h2>
+<ul>
+  <li>Nome: <%= @product.name %></li>
+  <li>Preço: <%= @product.price %></li>
+</ul>
+<%= pagseguro_form @order, :submit => "Efetuar pagamento!" %>

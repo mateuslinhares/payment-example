@@ -1,0 +1,30 @@
+<h1>Listing orders</h1>
+
+<table>
+  <tr>
+    <th>id</th>
+    <th>Produto</th>
+    <th>Usuario</th>
+    <th>Preço</th>
+    <th>Tipo de Pagamento</th>
+    <th>Situação</th>
+    <th>Sistema</th>
+    <th>Última alteração</th>
+    <th>Data do Pagamento</th>
+  </tr>
+
+<% @orders.each do |order| %>
+  <tr>
+    <td><%=h order.id %></td>
+    <td><%=h order.product.name %></td>
+    <td><%=h order.user.name %></td>
+    <td><%=h order.price %></td>
+    <td><%=h order.payment_type %></td>
+    <td><%=h order.status %></td>
+    <td><%=h order.admin_name %></td>
+    <td><%=h order.updated_at %></td>
+    <td><%=h order.paid_at %></td>
+    <td><%= paid_order(order) %></td>
+  </tr>
+<% end %>
+</table>
