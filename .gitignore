@@ -1,1 +1,12 @@
+*.swp
+*.swo
+tags
+tmp/*
 log/*
+log
+config/schema.db
+db/*.sqlite3
+db/schema.rb
+doc/specs.html
+
+REVISION
