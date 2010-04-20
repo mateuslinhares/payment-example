@@ -28,4 +28,14 @@ describe OrdersHelper do
     )
     helper.paid_order(order).should be_nil
   end
+
+  it 'should return a formatted date if has date' do
+    date = Time.mktime('2010','01','01','12','00','00')
+    helper.format_date(date).should == '01/01/2010 12:00:00'
+  end
+
+  it 'should return nil if has not date' do
+    date = nil
+    helper.format_date(date).should be_nil
+  end
 end
