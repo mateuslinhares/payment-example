@@ -12,7 +12,8 @@ describe Order do
       :payment_type => "value for payment_type",
       :status => "value for status",
       :processed_at => Time.now,
-      :paid_at => Time.now
+      :paid_at => Time.now,
+      :transaction_token => 'ABCDEFGHIJKLMNOPQRSTUVXZ'
     }
   end
 
@@ -20,7 +21,7 @@ describe Order do
     Order.create!(@valid_attributes)
   end
 
-  it 'should return system if last update has made by app' do
+  it 'should return system id if last update has made by app' do
     order = Order.new(@valid_attributes.except(:admin_id))
     order.admin_id = Order::UPDATE_USER["SYSTEM"]
     order.save
@@ -48,7 +49,6 @@ describe Order do
     order = Order.new(@valid_attributes.except(:admin_id))
     order.admin_id = Order::UPDATE_USER["SYSTEM"]
     order.save
-    order.admin.should == 0
     order.admin_name.should == 'SYSTEM'
   end
 

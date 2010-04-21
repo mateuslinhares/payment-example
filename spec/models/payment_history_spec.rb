@@ -11,7 +11,8 @@ describe PaymentHistory do
       :payment_type => "value for payment_type",
       :price => 9.99,
       :processed_at => Time.now,
-      :paid_at => Time.now
+      :paid_at => Time.now,
+      :transaction_token => 'ABCDEFGHIJKLMNOPQRSTUVXZ'
     }
   end
 
