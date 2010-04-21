@@ -3,6 +3,8 @@ class Order < ActiveRecord::Base
   belongs_to :user
   has_many :payment_histories
 
+  after_save :create_history
+
   UPDATE_USER = {
     "SYSTEM" => 0
   }
@@ -25,5 +27,14 @@ class Order < ActiveRecord::Base
     else
       self.admin.name
     end
+  end
+
+  private
+
+  def create_history
+    attributes = self.attributes
+    attributes.delete(:id)
+    attributes.merge! :order_id => self.id
+    PaymentHistory.create attributes
   end
 end
