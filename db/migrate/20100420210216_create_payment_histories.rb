@@ -10,6 +10,7 @@ class CreatePaymentHistories < ActiveRecord::Migration
       t.decimal :price, :precision => 8, :scale => 2
       t.datetime :processed_at
       t.datetime :paid_at
+      t.string :transaction_token
 
       t.timestamps
     end

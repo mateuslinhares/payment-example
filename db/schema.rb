@@ -15,11 +15,12 @@ ActiveRecord::Schema.define(:version => 20100420210216) do
     t.integer  "product_id"
     t.integer  "user_id"
     t.integer  "admin_id"
-    t.decimal  "price",        :precision => 8, :scale => 2
+    t.decimal  "price",             :precision => 8, :scale => 2
     t.string   "payment_type"
     t.string   "status"
     t.datetime "processed_at"
     t.datetime "paid_at"
+    t.string   "transaction_token"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -31,9 +32,10 @@ ActiveRecord::Schema.define(:version => 20100420210216) do
     t.integer  "admin_id"
     t.string   "status"
     t.string   "payment_type"
-    t.decimal  "price",        :precision => 8, :scale => 2
+    t.decimal  "price",             :precision => 8, :scale => 2
     t.datetime "processed_at"
     t.datetime "paid_at"
+    t.string   "transaction_token"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

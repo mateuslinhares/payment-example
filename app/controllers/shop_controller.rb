@@ -20,6 +20,7 @@ class ShopController < ApplicationController
       if notification.valid?
         order = Order.find(notification.params['Referencia'])
         order.status = Iconv.new('ISO-8859-1','UTF-8').iconv(notification.params['StatusTransacao'])
+        order.transaction_token = notification.params['TransacaoID']
         order.processed_at = notification.processed_at
         order.payment_type = Iconv.new('ISO-8859-1','UTF-8').iconv(notification.params['TipoPagamento'])
         order.paid_at = Time.now if notification.status.to_s == 'completed' or notification.status.to_s == 'approved'

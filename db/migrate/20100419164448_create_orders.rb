@@ -9,6 +9,7 @@ class CreateOrders < ActiveRecord::Migration
       t.string :status
       t.datetime :processed_at
       t.datetime :paid_at
+      t.string :transaction_token
 
       t.timestamps
     end
