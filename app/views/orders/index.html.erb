@@ -13,6 +13,7 @@
     <th>Última alteração</th>
     <th>Último processamento</th>
     <th>Data do Pagamento</th>
+    <th>Token</th>
   </tr>
 
 <% @orders.each do |order| %>
@@ -29,6 +30,7 @@
     <td><%=h format_date(order.processed_at) %></td>
     <td><%=h format_date(order.paid_at) %></td>
     <td><%= paid_order(order) %></td>
+    <td><%=h order.transaction_token %></td>
     <td><%= link_to 'Destroy', order, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
