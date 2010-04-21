@@ -2,6 +2,7 @@
 *.swo
 tags
 tmp/*
+tmp/pagseguro-development.yml
 log/*
 log
 config/schema.db
