@@ -1,0 +1,41 @@
+<h1>History: Order #<%= @payment_history.first.order_id%></h1>
+
+<table>
+  <tr>
+    <th>id</th>
+    <th>Pedido</th>
+    <th>Produto</th>
+    <th>Usuario</th>
+    <th>Preço</th>
+    <th>Tipo de Pagamento</th>
+    <th>Situação</th>
+    <th>Modificado por</th>
+    <th>Criado em</th>
+    <th>Última alteração</th>
+    <th>Último processamento</th>
+    <th>Data do Pagamento</th>
+    <th>Token</th>
+  </tr>
+
+<% @payment_history.each do |history| %>
+  <tr>
+    <td><%=h history.id %></td>
+    <td><%=h history.order_id %></td>
+    <td><%=h history.product.name %></td>
+    <td><%=h history.user.name %></td>
+    <td><%=h history.price %></td>
+    <td><%=h history.payment_type %></td>
+    <td><%=h history.status %></td>
+    <td><%=h history.admin_id %></td>
+    <td><%=h format_date(history.created_at) %></td>
+    <td><%=h format_date(history.updated_at) %></td>
+    <td><%=h format_date(history.processed_at) %></td>
+    <td><%=h format_date(history.paid_at) %></td>
+    <td><%=h history.transaction_token %></td>
+  </tr>
+<% end %>
+</table>
+
+<p>
+  <%= link_to 'Ver pedidos', orders_path %>
+</p>

@@ -27,4 +27,8 @@ class OrdersController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  def history
+    @payment_history = PaymentHistory.find_all_by_order_id(params[:id], :order => 'created_at DESC, id DESC')
+  end
 end

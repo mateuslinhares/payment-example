@@ -29,8 +29,9 @@
     <td><%=h format_date(order.updated_at) %></td>
     <td><%=h format_date(order.processed_at) %></td>
     <td><%=h format_date(order.paid_at) %></td>
-    <td><%= paid_order(order) %></td>
     <td><%=h order.transaction_token %></td>
+    <td><%= paid_order(order) %></td>
+    <td><%= link_to 'Histórico', history_order_path(order) %></td>
     <td><%= link_to 'Destroy', order, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
